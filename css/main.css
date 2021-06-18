@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    display: block;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+body {
+    display: flex;
+    flex-direction: row;
+}
+menu {
+    width: 115px;
+    height: 100vh;
+    background-color: #eeeef6;
+}
+
+.menu-items {
+    height: 100%;
+    font-family: sans-serif;
+}
+.menu-item {
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-item img {
+    width: 24px;
+}
+
+.menu-openner {
+    background-color: #393D46;
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-openner img {
+    width: 25px;
+}
+
+.menu-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #F7F6FA;
+    
+
+    border-radius: 10%;
+    
+    margin: auto;
+    margin-bottom: 5px;
+}
+.menu-item-icon img {
+    width: 37px;
+}
+.menu-item-active {
+    background-color: #F9654A;
+}
+
+
+
+
+#middle-section {
+    /* width: 70vw; */
+    width: 100%;
+    background-color: #fcfcfc;
+}
+header {
+    background-color: #EEEEF6;
+    height: 115px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+}
+.header-left-section {
+    margin-left: 40px;
+}
+.header-right-section {
+    display: flex;
+    margin-right: 40px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.search-icon {
+    height: 52px;
+    border-radius: 30px;
+    position: absolute;
+    text-align: left;
+    background: white;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+}
+.search-icon img {
+    width: 20px;
+    height: 20px;
+}
+.search {
+    padding-left: 50px;
+    width: 300px;
+    height: 52px;
+    border-radius: 30px;
+    border: none;
+}
+.search:focus {
+    outline: none;
+}
+
+.settings-container {
+    margin-left: 10px;
+    
+}
+.settings-btn {
+    background: #F9654A;
+    border: none;
+    box-shadow: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+}
+.settings-btn img {
+    width: 25px;
+}
+
+.workout-ground {
+    margin: 50px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10%;
+    padding: 15px;
+    box-shadow: 0 0 1px lightblue;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.workout-ground a {
+    text-align: left;
+}
+.workout-name {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.workout-ground img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+.preview-section img {
+    width: 300px
+}

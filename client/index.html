@@ -46,7 +46,7 @@
         </div>
     </menu>
     
-    <div id="middle-section">
+    <div id="app" class="middle-section">
         <header>
             <div class="header-left-section"><div class="logo">MyKoch</div></div>
 
@@ -61,17 +61,31 @@
                 </div>
             </div>            
         </header>
+        
+        <div class="workout-grounds-container" >            
+            <div v-if="loading"><loader /></div>
 
-        <div class="workout-grounds-container">
-            <div class="workout-ground">
-                <a id="workout-1" class="workout-ground-link" href="#">
-                    <div class="workout-img"><img src="./icons/workout/1.jpg" alt="" srcset=""></div>
+            <div v-else class="workout-ground" v-for="workout in workouts">
+                <a :id="workout.id" class="workout-ground-link" href="#">
+                    <div class="workout-img" :style="'background-image:url(./images/workout/' + workout.id + '.jpg); background-size: cover'"></div>
+                    <!-- <div class="workout-img" style="background-image: url('./images/workout/{{workout.id}}.jpg'); background-size: cover"></div> -->
+                    <!-- <div class="workout-img" style="background-image: url(", v-bind:style="'./images/workout/{{workout.id}}.jpg'); background-size: cover" ></div> -->
+                    <div class="workout-name">{{workout.title}}</div>
+                    <div class="geolocation">
+                        {{workout.geo}}
+                    </div>
+                </a>
+            </div>
+
+            <!-- <div class="workout-ground">
+                <a id="workout-2" class="workout-ground-link" href="#">
+                    <div class="workout-img" style="background-image: url('./images/workout/2.jpg'); background-size: cover"></div>
                     <div class="workout-name">Workout example</div>
                     <div class="geolocation">
                         Geo example
                     </div>
                 </a>
-            </div>
+            </div> -->
         </div>
 
     </div>
@@ -82,5 +96,6 @@
         </div>
     </div>
     <script src="./js/style.js"></script>
+    <script type="module" src="./js/frontend.js"></script>
 </body>
 </html>

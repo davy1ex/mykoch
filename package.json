@@ -1,0 +1,30 @@
+{
+  "name": "mykoch",
+  "version": "1.0.0",
+  "description": "test backend mykoch",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davy1ex/mykoch.git"
+  },
+  "keywords": [
+    "js",
+    "mykoch"
+  ],
+  "author": "davy1ex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davy1ex/mykoch/issues"
+  },
+  "homepage": "https://github.com/davy1ex/mykoch#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

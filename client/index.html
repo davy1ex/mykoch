@@ -45,56 +45,52 @@
             
         </div>
     </menu>
+    <div id="app" class="content">
+        <div  class="middle-section">
+            <header>
+                <div class="header-left-section"><div class="logo">MyKoch</div></div>
     
-    <div id="app" class="middle-section">
-        <header>
-            <div class="header-left-section"><div class="logo">MyKoch</div></div>
-
-            <div class="header-right-section">
-                <div class="search-container">
-                    <div class="search-icon"><img src="./icons/search.png" alt="" srcset=""></div>
-                    <input class="search" type="text" placeholder="Search">
-                </div>
-    
-                <div class="settings-container">
-                    <button class="settings-btn"><img src="./icons/setting.png" alt=""></button>
-                </div>
-            </div>            
-        </header>
+                <div class="header-right-section">
+                    <div class="search-container">
+                        <div class="search-icon"><img src="./icons/search.png" alt="" srcset=""></div>
+                        <input class="search" type="text" placeholder="Search">
+                    </div>
         
-        <div class="workout-grounds-container" >            
-            <div v-if="loading"><loader /></div>
-
-            <div v-else class="workout-ground" v-for="workout in workouts">
-                <a :id="workout.id" class="workout-ground-link" href="#">
-                    <div class="workout-img" :style="'background-image:url(./images/workout/' + workout.id + '.jpg); background-size: cover'"></div>
-                    <!-- <div class="workout-img" style="background-image: url('./images/workout/{{workout.id}}.jpg'); background-size: cover"></div> -->
-                    <!-- <div class="workout-img" style="background-image: url(", v-bind:style="'./images/workout/{{workout.id}}.jpg'); background-size: cover" ></div> -->
-                    <div class="workout-name">{{workout.title}}</div>
-                    <div class="geolocation">
-                        {{workout.geo}}
+                    <div class="settings-container">
+                        <button class="settings-btn"><img src="./icons/setting.png" alt=""></button>
                     </div>
-                </a>
+                </div>            
+            </header>
+            
+            <div class="workout-grounds-container" >            
+                <!-- <div v-if="loading"><loader /></div> -->
+    
+                <div class="workout-ground" v-for="workout in workouts">
+                    <div :id="workout.id" class="workout-ground-link"  v-on:click="showPreviewSection(workout)">
+                        <div class="workout-img" :style="'background-image:url(./images/workout/' + workout.id + '.jpg); background-size: cover'"></div>
+                        <!-- <div class="workout-img" style="background-image: url('./images/workout/{{workout.id}}.jpg'); background-size: cover"></div> -->
+                        <!-- <div class="workout-img" style="background-image: url(", v-bind:style="'./images/workout/{{workout.id}}.jpg'); background-size: cover" ></div> -->
+                        <div class="workout-name">{{workout.title}}</div>
+                        <div class="geolocation">
+                            {{workout.geo}}
+                        </div>
+                    </div>
+                </div>  
             </div>
-
-            <!-- <div class="workout-ground">
-                <a id="workout-2" class="workout-ground-link" href="#">
-                    <div class="workout-img" style="background-image: url('./images/workout/2.jpg'); background-size: cover"></div>
-                    <div class="workout-name">Workout example</div>
-                    <div class="geolocation">
-                        Geo example
-                    </div>
-                </a>
-            </div> -->
         </div>
 
-    </div>
-
-    <div class="preview-section">
-        <div class="img-selector">
+        <div class="preview-section" v-if="previewSection">
+            <div class="preview-content-wrapper">
+                <div class="workout-img"><img :src="'./images/workout/' + workout.id + '.jpg'" alt="" srcset=""></div>
+                <div class="workout-name">{{workout.title}}</div>
+                <div class="geolocation">
+                    {{workout.geo}}
+                </div>
+            </div> 
             
         </div>
     </div>
+    
     <script src="./js/style.js"></script>
     <script type="module" src="./js/frontend.js"></script>
 </body>

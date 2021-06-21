@@ -71,7 +71,10 @@ menu {
 
 
 
-
+.content {
+    width: 100%;
+    display: flex;
+}
 .middle-section {
     /* width: 70vw; */
     width: 100%;
@@ -181,7 +184,19 @@ header {
 /*  */
 /*  */
 
-
-.preview-section img {
-    width: 300px
+.preview-section {
+    width: 400px;
+    box-shadow: 0 0 1px #99A5EC;;
+}
+.preview-content-wrapper {
+    width: 90%;
+    padding: 50px 0;
+    margin: auto;
+}
+.preview-section .workout-img {
+    margin-bottom: 50px;
+}
+.preview-section .workout-img img {
+    width: 100%;
+    border-radius: 10px;
 }

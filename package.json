@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/davy1ex/mykoch#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
     "nodemon": "^2.0.7"
   }
 }

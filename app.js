@@ -17,7 +17,7 @@ app.get('/api/get_workouts', (req, res) => {
 app.use(express.static(path.resolve(__dirname, 'client')))
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'index.html'))
+    res.sendFile(path.resolve(__dirname, 'client', 'index.html'), {api:process.env.api_key})
 })
 
 app.listen(3000, () => console.log('im start'))

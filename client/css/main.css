@@ -185,18 +185,31 @@ header {
 /*  */
 
 .preview-section {
-    width: 400px;
-    box-shadow: 0 0 1px #99A5EC;;
+    width: 30vw;
+    box-shadow: 0 0 1px #99A5EC;
 }
 .preview-content-wrapper {
     width: 90%;
-    padding: 50px 0;
+    height: 100vh;
+    padding: 25px 0;
     margin: auto;
 }
 .preview-section .workout-img {
-    margin-bottom: 50px;
+    /* height: 200px; */
+    /* max-height: 100%; */
+    box-shadow: 0 0 20px #f0f8f6;;
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
 }
 .preview-section .workout-img img {
     width: 100%;
+    border-radius: 10px;
+}
+
+.map {
+    width: 100%;
+    height: 40%;
     border-radius: 10px;
 }

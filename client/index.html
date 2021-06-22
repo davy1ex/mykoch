@@ -8,9 +8,10 @@
 
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/main.css">
-
-    <script src="./js/jquery.js"></script>
     
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=${process.env.api_key}&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
     <menu>
@@ -80,18 +81,28 @@
         </div>
 
         <div class="preview-section" v-if="previewSection">
+            
             <div class="preview-content-wrapper">
+                <div v_on:click="hidePreviewSection">X</div>
                 <div class="workout-img"><img :src="'./images/workout/' + workout.id + '.jpg'" alt="" srcset=""></div>
                 <div class="workout-name">{{workout.title}}</div>
                 <div class="geolocation">
                     {{workout.geo}}
                 </div>
+                <details class="description">
+                    <summary>Description</summary>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, corporis! Aut facere, numquam eius corrupti modi inventore dolorum non perferendis, natus quidem aperiam suscipit quam illum repellat quis cumque iusto?
+                </details>
+
+                <div id="map" class="map"></div>
+
+                
             </div> 
             
         </div>
     </div>
-    
-    <script src="./js/style.js"></script>
+    <!-- <script src="./js/style.js"></script> -->
     <script type="module" src="./js/frontend.js"></script>
+    
 </body>
 </html>
